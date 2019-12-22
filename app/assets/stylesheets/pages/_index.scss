@@ -1,2 +1,21 @@
 // Import page-specific CSS files here.
 @import "home";
+
+li {
+  list-style-type: none;
+}
+
+.event-list {
+  column-count: 2;
+  column-gap: 5px;
+  padding: 5px;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
