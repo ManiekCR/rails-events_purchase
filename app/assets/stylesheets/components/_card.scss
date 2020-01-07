@@ -30,3 +30,14 @@
 .card-event .card-event-infos {
   padding: 16px;
 }
+
+.list-card {
+  border: 1px solid gray;
+  border-radius: 3px;
+  max-width: 390px;
+  padding: 10px 10px;
+}
+
+.list-card:hover {
+  border: 2px solid black
+}
