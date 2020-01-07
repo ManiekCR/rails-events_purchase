@@ -6,7 +6,10 @@
     <p>Price: <%= humanized_money_with_symbol(@event.price) %></p>
     <% if @event.availability > 0 %>
     <p>Availability: <%= @event.availability %> tickets left</p>
-      <button type="button" class="btn btn-primary">Buy a ticket </button>
+      <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'event_id', @event.id %>
+        <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+      <% end %>
     <% else %>
       <button type="button" class="btn btn-secondary active">Not available</button>
     <% end %>
