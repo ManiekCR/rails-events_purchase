@@ -1,9 +1,14 @@
 <div class="container mt-5">
-  <%= @orders.each do |order| %>
-    <li>
-      <%= link_to order_path(order) do %>
-      <ul class="list-card">Order n°<%= order.id %> - <%= order.event.name %> - <%= order.state %></ul>
-      <% end %>
-    </li>
+  <% if !@orders.empty? %>
+    <% @orders.each do |order| %>
+      <li>
+        <%= link_to order_path(order) do %>
+        <ul class="list-card">Order n°<%= order.id %> - <%= order.event.name %> - <%= order.state %></ul>
+        <% end %>
+      </li>
+    <% end %>
+  <% else %>
+    <p>No orders made yet!</p>
+    <%= link_to 'Find a festival!', events_path, class: 'btn btn-primary' %>
   <% end %>
 </div>
