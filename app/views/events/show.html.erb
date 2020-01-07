@@ -3,10 +3,12 @@
   <h5 class="pb-3"><em><%= @event.city  %> <%= @event.country %></em></h5>
   <p><%= @event.description %></p>
   <div>
+    <p>Price: <%= humanized_money_with_symbol(@event.price) %></p>
     <% if @event.availability > 0 %>
+    <p>Availability: <%= @event.availability %> tickets left</p>
       <button type="button" class="btn btn-primary">Buy a ticket </button>
     <% else %>
-      <button type="button" class="btn btn-secondary">Not available</button>
+      <button type="button" class="btn btn-secondary active">Not available</button>
     <% end %>
   </div>
 
