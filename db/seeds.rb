@@ -35,7 +35,7 @@ Event.create!(name: 'Sziget Festival',
 
 Event.create!(name: 'Exit Festival',
               city: 'Novi Sad',
-              country: 'Sebia',
+              country: 'Serbia',
               description: "Exit is an award-winning summer music festival. It is held annually at the Petrovaradin Fortress in the city of Novi Sad (Serbia), which is considered by many as one of the best festival venues in the world.
 Exit is unique in the festival world as it started as a student movement fighting for peace and democracy in Serbia and the Balkans. Even today, Exit has a strong social mission to help youth in the Balkans and it is run by a non-profit organisation.",
               date: "2020-02-07",
