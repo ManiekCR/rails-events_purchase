@@ -9,7 +9,8 @@ Event.create!(name: 'Tomorrowland',
               date: "2020-07-19",
               time: "17:00:00",
               availability: 1000,
-              price: 300
+              price: 300,
+              sku: 'Tomorrowland'
               )
 
 Event.create!(name: 'Earth Garden',
@@ -20,7 +21,8 @@ It features 5 music areas and around 120 acts from around the World with an ecle
               date: "2020-05-30",
               time: "16:00:00",
               availability: 7000,
-              price: 100
+              price: 100,
+              sku: 'Earth Garden'
               )
 
 Event.create!(name: 'Sziget Festival',
@@ -30,7 +32,8 @@ Event.create!(name: 'Sziget Festival',
               date: "2020-07-08",
               time: "12:00:00",
               availability: 15000,
-              price: 250
+              price: 250,
+              sku: 'Sziget Festival'
               )
 
 Event.create!(name: 'Exit Festival',
@@ -41,7 +44,8 @@ Exit is unique in the festival world as it started as a student movement fightin
               date: "2020-02-07",
               time: "16:00:00",
               availability: 5000,
-              price: 150
+              price: 150,
+              sku: 'Exit Festival'
               )
 
 Event.create!(name: 'NOS Primavera Sound',
@@ -52,7 +56,8 @@ NOS Primavera Sound's line-up counts with an ample selection of international ar
               date: "2020-06-06",
               time: "13:00:00",
               availability: 5000,
-              price: 100
+              price: 100,
+              sku: 'NOS Primavera Sound'
               )
 
 Event.create!(name: 'Glastonbury Festival',
@@ -63,7 +68,8 @@ It's like going to another country, a hip and thrilling Brigadoon that appears e
               date: "2020-06-27",
               time: "14:00:00",
               availability: 0,
-              price: 120
+              price: 120,
+              sku: 'Glastonbury Festival'
               )
 
 puts 'Finished!'
