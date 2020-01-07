@@ -1,12 +1,16 @@
 class OrdersController < ApplicationController
+  def show
+    @order = current_user.orders.find(params[:id])
+  end
+
   def create
     event = Event.find(params[:event_id])
-    order = Order.create!(event: event, name: event.name, amount: event.price, state: 'pending', user: current_user)
+    order = Order.create!(event: event, event_sku: event.sku, amount: event.price, state: 'pending', user: current_user)
 
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: [{
-        name: event.name,
+        name: event.sku,
         amount: event.price_cents,
         currency: 'eur',
         quantity: 1
