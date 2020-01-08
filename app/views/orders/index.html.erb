@@ -3,7 +3,7 @@
     <% @orders.each do |order| %>
       <li>
         <%= link_to order_path(order) do %>
-        <ul class="list-card">Order n°<%= order.id %> - <%= order.event.name %> - <%= order.state %></ul>
+        <ul class="list-card">Order #<%= order.id %> - <%= order.event.name %> - <%= order.state %></ul>
         <% end %>
       </li>
     <% end %>
