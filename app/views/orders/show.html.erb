@@ -3,6 +3,7 @@
   <ul class="list-unstyled">
     <li><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></li>
     <li><strong>EVENT</strong> <%= @order.event.name %> [<%= @order.event.city %>, <%= @order.event.country %>]</li>
+    <li><strong>WHEN</strong> <%= @order.event.date.strftime("%B %d, %Y") %> - <%= @order.event.time.strftime("%H:%M") %></li>
     <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.amount %></li>
     </li>
   </ul>
