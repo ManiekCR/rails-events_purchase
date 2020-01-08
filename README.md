@@ -19,7 +19,7 @@
 - As a user I can view all my orders
 - As a user I can logout
 
-- To proceed a successful payment on stripe, use the following details:
+### To proceed a successful payment on stripe, use the following details:
 * card number: 4242 4242 4242 4242
 * expiration date: any future date
 * CVC: anything
