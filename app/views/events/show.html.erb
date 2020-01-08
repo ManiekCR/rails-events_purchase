@@ -1,16 +1,32 @@
 <div class="p-5">
   <h1><%= @event.name %></h1>
   <h5 class="pb-3"><em><%= @event.city  %> <%= @event.country %></em></h5>
+  <h6 class="pb-3"> <%= @event.date.strftime("%B %d, %Y") %> - <%= @event.time.strftime("%H:%M") %></h6>
   <p><%= @event.description %></p>
   <div>
     <p>Price: <%= humanized_money_with_symbol(@event.price) %></p>
+    <!-- if there are tickets available -->
     <% if @event.availability > 0 %>
-    <p>Availability: <%= @event.availability %> tickets left</p>
+    <!-- display the right number of tickets + proper button -->
+      <p>Availability:
+        <!-- Implement here the availability decrementation -->
+        <% order = Order.last.event_sku %>
+        <% selected_event = @event.sku %>
+          <% if order == selected_event %>
+            <% @event.availability -= 1 %>
+            <% @event.save %>
+            <%= @event.availability %>
+          <% else %>
+            <%= @event.availability %>
+          <% end %>
+        <!--  -->
+      tickets left</p>
       <%= form_tag orders_path do %>
         <%= hidden_field_tag 'event_id', @event.id %>
         <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
       <% end %>
     <% else %>
+    <!-- display "not available" -->
       <button type="button" class="btn btn-secondary active">Not available</button>
     <% end %>
   </div>
