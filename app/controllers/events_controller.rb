@@ -8,6 +8,10 @@ class EventsController < ApplicationController
   def show
   end
 
+  def exists?
+    Order.all.empty?
+  end
+
   private
 
   def set_event
